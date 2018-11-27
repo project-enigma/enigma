@@ -1,0 +1,22 @@
+<aside class="pricing">
+  <p>{{trip.name}}</p>
+  <p>{{trip.price}}€</p>
+  <p>{{trip.tickets}} tickets left!</p>
+  <br>
+  <p>Total: {{trip.price}}€</p>
+</aside>
+<form action="/trips/buy/{{trip.id}}" method="post">
+<label for="">Full Name: </label><input required placeholder="John Smith" name="fullname" type="text">
+<label for="phone">Phone Number: </label><input required placeholder="675118982" type="number" name="phone">
+<label for="email">E-mail: </label><input required placeholder="albertoelchef@gmail.com" type="email" name="email">
+<label for="address">Address: </label><input required placeholder="Paseo de la Chopera 9" type="text" name="address">
+<br>
+<label for="creditcard">Credit Card: </label>
+<div class="creditcard">
+  <label for="ccname">Owner's Name: </label><input required placeholder="John Smith" name="ccName" type="text">
+  <label for="ccNum">Card Number: </label><input required placeholder="4255033081193109" name="ccNum" type="Number">
+  <label for="ccDate">Caducity: </label><input required placeholder="03/25" name="ccDate" type="text">
+  <label for="csv">CSV: </label><input required placeholder="639" name="csv" type="number">
+</div>
+<button type="submit">Buy</button>
+</form>

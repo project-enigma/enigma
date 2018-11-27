@@ -1,0 +1,45 @@
+{{!-- <style>
+  .mysteries {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+
+  .mystery {
+    display: flex;
+    flex-direction: column;
+    width: 20rem;
+    align-items: center;
+    margin: 2rem 0;
+  }
+
+  h4 {
+    width: fit-content;
+  }
+
+  p {
+    width: fit-content;
+  }
+</style> --}}
+
+<div class="mysteries">
+  {{#each trips}}
+  {{#if this.tickets}}
+  <div class="mystery" onclick="location.href='/trips/buy/{{this.id}}'">
+  {{else}}
+  <div class="mystery">
+{{/if}}
+    <img src="https://dsbs42.files.wordpress.com/2011/06/quoi.gif" alt="">
+    <h4>{{this.name}}</h4>
+    {{#if this.tickets}}
+    <p>{{this.tickets}} tickets left!</p>
+    {{else}}
+    <p>No tickets left...</p>
+    {{/if}}
+    <p>OR: {{this.from}}</p>
+    <p>Depart: {{formatDate this.depart}} </p>
+    <p>Return: {{formatDate this.return}} </p>
+    <p>Price: {{this.price}}€ </p>
+  </div>
+  {{/each}}
+</div>

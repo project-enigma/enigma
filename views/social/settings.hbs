@@ -1,0 +1,30 @@
+<aside>
+   <img src="{{user.imgPath}}" alt="" style="width:100px;height:100px">
+   <h1>{{user.username}}</h1>
+   <h3><a href="/social/profile">My Profile</a></h3>
+   <h3><a href="/social/friends">Friends</a></h3>
+   <h3><a href="/social/settings">Settings</a></h3>
+</aside>
+
+<section>
+  <form action="" method="post" enctype="multipart/form-data">
+  <div>
+    <label>Email</label>
+    <input type="email" name="email">
+  </div>
+   <div>
+    <label>Username</label>
+    <input type="text" name="username">
+  </div>
+    <div>
+    <label>Password</label>
+    <input type="password" name="password">
+  </div>
+  <div>
+  <label>Avatar</label>
+  <input type="file" name="photo">
+  <input type="text" name="userid" value="{{user.id}}" hidden>
+  </div>
+  <input type="submit" value="SAVE CHANGES">
+  </form>
+</section>

@@ -1,0 +1,301 @@
+
+@import 'chat';
+@import 'trips';
+@import 'profile';
+
+
+body {
+  padding: 0px;
+  margin: 0;
+  background-color: #f3f3f3;
+  font-size: 16px;
+}
+
+a {
+  color: white;
+text-shadow: 0 2px 5px black;
+font-size: 20px;
+}
+ 
+// landing
+
+.logo-image{
+  width: 90px;
+  height: 90px;
+}
+.main-nav{
+width: 100%;
+height: 120px;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+align-items: center;
+padding-right: 10%; 
+padding-left: 10%;
+padding-bottom: 13px;
+font-size: 18px;
+font-weight: bold;
+position: fixed;
+z-index: 7;
+top: 0;
+box-shadow: 0 5px 15px rgba(0,0,0,0.6);
+background-color: rgba(0,0,0,0.3)
+}
+
+.carousel-img{
+  width: 100vw;
+  height: 100vh;
+}
+.text-box-1{
+  position: absolute;
+  top: 300px;
+  text-align: left;
+  font-family: 'Roboto', sans-serif;
+
+  font-weight: 300;
+
+}
+
+.text-box-2{
+  position: absolute;
+  top: 300px;
+  text-align: right;
+  font-family: 'Roboto', sans-serif;
+
+  font-weight: 300;
+
+}
+
+.title-slide{
+  font-size: 90px;
+  text-shadow: 0 2px 10px black; 
+}
+.text-btn-trips{
+  width: 320px;
+  height: 60px;
+  background-color:#610CFF;
+  color: white;
+  box-shadow: 0 1px 10px black; 
+  border: none;
+  border-radius: 30px;
+  text-align: center;
+  margin-top: 15px;
+}
+.info{
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.locations{
+  width: 1000px;
+margin: 100px 0 100px 0;
+  
+
+}
+.discover-h1{
+  font-size: 100px;
+  font-family: 'Roboto', sans-serif;
+  margin-top: 80px;
+  border-left: #610CFF solid 8px;
+  padding-left: 25px;
+}
+.info p{
+  text-align: center;
+  margin-top: 50px;
+  color: darkslategrey; 
+  font-size: 1.5em;
+}
+.mystery{
+  display: flex;
+  float: row nowrap;
+  width: 100%;
+}
+.mystery-h1{
+  font-size: 100px;
+  font-family: 'Roboto', sans-serif;
+  margin: 50px 0 50px 0;
+  border-left: #610CFF solid 8px;
+  padding-left: 25px;
+}
+.discover{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.rose-compass{
+  margin: 50px 20px 50px 20px;
+  width: 400px;
+  height: auto;
+}
+.landing-text-1{
+  text-align: right;
+}
+.landing-text-2{
+  text-align: left;
+}
+
+
+
+//social
+.social-h1{
+  font-size: 100px;
+  font-family: 'Roboto', sans-serif;
+  margin: 50px 0 50px 0;
+  border-left: #610CFF solid 8px;
+  padding-left: 25px;
+}
+
+.social{
+  display: flex;
+  flex: row nowrap;
+  margin: 50px 0 120px 0;
+
+}
+.card-m{
+  margin-left: 60px;
+}
+.card-mar{
+  margin-bottom: 20px;
+}
+
+
+
+
+
+//footer
+
+.footer-top{
+  width: 100%;
+  text-align: center;
+  color: #cccccc;
+  display: table;
+}
+
+.socials{
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.socials * {
+  box-sizing: border-box;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+}
+
+.socials li {
+  display: inline-block;
+  list-style: outside none none;
+  float: left;
+  overflow: hidden;
+  width: 33.33333%;
+  font-size: 13px;
+}
+
+.socials a {
+  padding: 0.3em 0.8em;
+  color: rgba(255, 255, 255, 0.7);
+  position: relative;
+  display: inline-block;
+  letter-spacing: 1px;
+  margin: 0;
+  text-decoration: none;
+  padding: 25px 0;
+  width: 100%;
+}
+
+.socials a:before,
+.socials a:after {
+  position: absolute;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+}
+
+.socials a:before {
+  bottom: 100%;
+  display: block;
+  height: 3px;
+  width: 100%;
+  content: "";
+}
+
+.socials a:after {
+  padding: 0.3em 0.8em;
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  content: attr(data-hover);
+  color: white;
+  white-space: nowrap;
+  width: 100%;
+  padding: 25px 0;
+}
+
+.socials li:hover a,
+.socials .current a {
+  transform: translateY(100%);
+}
+
+.facebook{
+  background: #969696;
+}
+.facebook a:after{
+  background-color: #527bbb;
+}
+.twitter{
+  background: #ABABAB;
+}
+.twitter a:after{
+  background-color: #77ccf1;
+}
+.gplus{
+  background: #d8d8d8;
+}
+.gplus a:after{
+  background: #dd4b39;
+}
+
+.footer-bottom{
+  width: 100%;
+  background: #2f2f2f;
+  height: 70px;    
+ 
+  color: #636363;
+}
+
+
+//login
+
+.login-form{
+  background-color:  #9359FF;
+  width: 40%;
+  height: auto; 
+  border-radius:30px;
+  margin-top:180px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  background-image: url("../images/login-img.jpg");
+  background: contain no-repeat center;
+  padding: 10%;
+
+}
+.login{
+width: 100%;
+height: auto;
+display: flex;
+justify-content: center;
+
+
+
+}
+.logo-login{
+  width: 200px;
+  height: 200px;
+}

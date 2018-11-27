@@ -1,0 +1,18 @@
+<aside>
+   <img src="{{user.imgPath}}" alt="" style="width:100px;height:100px">
+   <h1>{{user.username}}</h1>
+   <h3><a href="/social/profile">My Profile</a></h3>
+   <h3><a href="/social/friends">Friends</a></h3>
+   <h3><a href="/social/settings">Settings</a></h3>
+</aside>
+<style>
+   #map {
+      height: 500px;
+      width: 100%;
+   }
+</style>
+<h3>My Trips</h3>
+<div id="map"></div>
+
+<script src="https://maps.googleapis.com/maps/api/js?key={{myEnv.GOOGLE_MAPS_API_KEY}}"></script>
+<script src="/javascripts/map.js"></script>
