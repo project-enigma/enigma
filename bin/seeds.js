@@ -2,6 +2,7 @@
 
 // To execute this seed, run from the root of the project
 // $ node bin/seeds.js
+require('dotenv').config();
 
 const User = require('../models/User');
 const Trip = require('../models/Trip');
@@ -13,7 +14,7 @@ const bcrypt = require('bcrypt');
 const bcryptSalt = 10;
 
 mongoose
-  .connect('mongodb://localhost/enigma', {
+  .connect(process.env.DBURL, {
     useNewUrlParser: true,
   })
   .then((x) => {
