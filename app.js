@@ -103,4 +103,8 @@ const socialRoutes = require('./routes/social');
 
 app.use('/social', socialRoutes);
 
+const reviewsRoutes = require('./routes/social/reviews');
+
+app.use('/social/reviews', reviewsRoutes);
+
 module.exports = app;
