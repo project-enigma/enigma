@@ -1,17 +1,18 @@
 
  <div class="login">
   <div class="login-form">
-    <img class="logo-login" src="../images/enigma-logo-white.svg" alt="">
-    <h1>Login</h1>
+    <img class="logo-login-signup" src="../images/enigma-logo-white.svg" alt="">
+    
     <form action="/auth/login" method="POST" id="form-container">
 
     
-     
-      <input id="username" type="text" name="username" placeholder="JonSnow">
+     <div class="imput-box">
+      <input class="imput" id="username" type="text" name="username" placeholder="username">
 
       <br><br>
 
-      <input id="password" type="password" name="password" placeholder="Your password">
+      <input class="imput" id="password" type="password" name="password" placeholder="Password">
+    </div>
       <br>
       {{#if message }}
       <div class="error-message">{{ message }}</div>
@@ -19,12 +20,14 @@
 
       <br><br>
 
-      <button>Login</button>
+      <a href="/"><button class="btn-login-signup">Login</button></a>
 
-      <p class="account-message">
+      
+    </form>
+    
+  </div>
+  <p class="account-message">
         Don't have an account yet?
         <a href="/auth/signup">Signup</a>
       </p>
-    </form>
-  </div>
 </div>

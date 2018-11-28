@@ -1,4 +1,6 @@
-{{!-- <style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
   .mysteries {
     display: flex;
     flex-flow: row wrap;
@@ -20,26 +22,37 @@
   p {
     width: fit-content;
   }
-</style> --}}
+
+  .checked {
+    color: orange;
+  }
+</style>
 
 <div class="mysteries">
   {{#each trips}}
   {{#if this.tickets}}
   <div class="mystery" onclick="location.href='/trips/buy/{{this.id}}'">
-  {{else}}
-  <div class="mystery">
-{{/if}}
-    <img src="https://dsbs42.files.wordpress.com/2011/06/quoi.gif" alt="">
-    <h4>{{this.name}}</h4>
-    {{#if this.tickets}}
-    <p>{{this.tickets}} tickets left!</p>
     {{else}}
-    <p>No tickets left...</p>
-    {{/if}}
-    <p>OR: {{this.from}}</p>
-    <p>Depart: {{formatDate this.depart}} </p>
-    <p>Return: {{formatDate this.return}} </p>
-    <p>Price: {{this.price}}€ </p>
+    <div class="mystery">
+      {{/if}}
+      <img src="https://dsbs42.files.wordpress.com/2011/06/quoi.gif" alt="">
+      <h4>{{this.name}}</h4>
+      {{#if this.tickets}}
+      <p>{{this.tickets}} tickets left!</p>
+      {{else}}
+      <p>No tickets left...</p>
+      {{/if}}
+      <p>OR: {{this.from}}</p>
+      <p>Depart: {{formatDate this.depart}} </p>
+      <p>Return: {{formatDate this.return}} </p>
+      <div class="stars">
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span>
+      </div>
+      <p>Price: {{this.price}}€ </p>
+    </div>
+    {{/each}}
   </div>
-  {{/each}}
-</div>

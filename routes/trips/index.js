@@ -32,7 +32,11 @@ tripsRouter.get('/buy/:id/success', ensureLoggedIn('/auth/login'), (req, res, ne
 
 tripsRouter.post('/buy/:id', ensureLoggedIn('/auth/login'), (req, res, next) => {
   Trip.findByIdAndUpdate(req.params.id, { $addToSet: { users: req.user.id } })
-    .then(() => res.redirect(`/trips/buy/${req.params.id}/success`))
+    .then(() => {
+      User.findByIdAndUpdate(req.user.id, { $addToSet: { trips: req.params.id } })
+        .then(() => res.redirect(`/trips/buy/${req.params.id}/success`))
+        .catch(err => next(err));
+    })
     .catch(err => next(err));
 });
 

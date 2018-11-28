@@ -31,6 +31,9 @@ const TripSchema = new Schema({
     type: Number,
     default: 30,
   },
+  stars: {
+    type: Number,
+  },
   users: [{
     type: Schema.Types.ObjectId,
   }],
