@@ -14,7 +14,10 @@ const socialRouter = express.Router();
 
 socialRouter.get('/profile', ensureLoggedIn('/auth/login'), (req, res, next) => {
   const myEnv = process.env;
-  res.render('social/profile', { myEnv });
+  User.findById(req.user)
+    .populate('trips')
+    .then(myUser => res.render('social/profile', { myUser, myEnv }))
+    .catch(err => next(err));
 });
 
 socialRouter.get('/getTrips', (req, res, next) => {
