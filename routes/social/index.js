@@ -14,7 +14,10 @@ const socialRouter = express.Router();
 
 socialRouter.get('/profile', ensureLoggedIn('/auth/login'), (req, res, next) => {
   const myEnv = process.env;
-  res.render('social/profile', { myEnv });
+  User.findById(req.user)
+    .populate('trips')
+    .then(myUser => res.render('social/profile', { myUser, myEnv }))
+    .catch(err => next(err));
 });
 
 socialRouter.get('/getTrips', (req, res, next) => {
@@ -93,6 +96,14 @@ socialRouter.get('/chat', ensureLoggedIn('/auth/login'), (req, res, next) => {
   res.render('social/chat', {
     user:userName, userAll, CHATENGINE_PUBLISH_KEY:process.env.CHATENGINE_PUBLISH_KEY, CHATENGINE_SUB_KEY : process.env.CHATENGINE_SUB_KEY,
   });
+});
+
+socialRouter.post('/deleteFriend', ensureLoggedIn('/auth/login'), (req, res, next) => {
+  const userId = req.user.id;
+  const { friendName, friendId } = req.body;
+  User.findByIdAndUpdate(userId, { $pull: { friends: friendId } })
+    .then(() => res.redirect('/social/friends'))
+    .catch(err => next(err));
 });
 
 

@@ -1,0 +1,43 @@
+<h1>
+  {{myReview.title}}
+</h1>
+<h5>
+  {{myReview.description}}
+</h5>
+{{#each myReview.images}}
+<img style="width:100%" src="{{this.imgPath}}" alt="{{this.imgName}}">
+{{/each}}
+<div class="comments">
+  {{#each myReview.comments}}
+  <div class="comment">
+    <div class="author">
+      <img src="{{this.authorId.imgPath}}" alt="{{this.authorId.imgName}}">
+      <p>{{this.authorId.username}}</p>
+    </div>
+    <p>{{this.content}}</p>
+  </div>
+  {{/each}}
+  <button class="add-comment" data-toggle="modal" data-target="#myModal">
+    Add a comment
+  </button>
+</div>
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <form action="/social/reviews/newComment" method="post">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="myModalLabel">Comment</h4>
+        </div>
+        <div class="modal-body">
+          <textarea name="commentText" cols="30" rows="5"></textarea>
+          <input type="hidden" name="postId" value="{{myReview.id}}">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary">Post Comment</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
