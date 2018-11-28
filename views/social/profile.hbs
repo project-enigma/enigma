@@ -11,7 +11,16 @@
       width: 100%;
    }
 </style>
-<h3>My Trips</h3>
+<h3>My Trips:</h3>
+<div class="trips">
+   {{#each user.trips}}
+      <div class="trip">
+         {{!-- <img src="the used image on trips" alt=""> --}}
+         <h3>{{this.title}}</h3>
+         <a href=""><button>Chat</button></a>
+      </div>
+   {{/each}}
+</div>
 <div id="map"></div>
 
 <script src="https://maps.googleapis.com/maps/api/js?key={{myEnv.GOOGLE_MAPS_API_KEY}}"></script>
