@@ -52,8 +52,5 @@ function startMap() {
 
 
 window.onload = () => {
-  // google.maps.event.addListener(marker, 'click', function () {
-  //   window.location.href = this.url;
-  // });
   startMap();
 };
