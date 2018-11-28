@@ -13,11 +13,11 @@
 </style>
 <h3>My Trips:</h3>
 <div class="trips">
-   {{#each user.trips}}
+   {{#each myUser.trips}}
       <div class="trip">
          {{!-- <img src="the used image on trips" alt=""> --}}
-         <h3>{{this.title}}</h3>
-         <a href=""><button>Chat</button></a>
+         <h3>{{this.name}}</h3>
+         <a href="/social/chat"><button>Chat</button></a>
       </div>
    {{/each}}
 </div>
