@@ -23,6 +23,13 @@
   <img src="{{this.imgPath}}" alt="" style="width:100px;height:100px;">
   <p>{{this.username}}</p>
   <button><a href="/social/chat">Chat</a></button>
+
+  <form action="/social/deleteFriend" method="post">
+    <input type="text" name="friendId" value="{{this.id}}" hidden>
+    <input type="text" name="friendName" value="{{this.username}}" hidden>
+    <input type="submit" value="Delete">
+  </form>
+
   {{/each}}
 </section>
 
