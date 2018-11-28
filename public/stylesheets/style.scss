@@ -270,20 +270,27 @@ margin: 100px 0 100px 0;
 
 //login
 
+
+
+
+
 .login-form{
-  background-color:  #9359FF;
-  width: 40%;
-  height: auto; 
+  
+  width: 700px;
+ height: 700px; 
   border-radius:30px;
-  margin-top:180px;
+  margin-top:280px;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
   align-content: center;
   background-image: url("../images/login-img.jpg");
-  background: contain no-repeat center;
-  padding: 10%;
+  background-repeat: no-repeat;
+  background-size: cover ;
+  background-position: center;
+ 
+ 
 
 }
 .login{
@@ -291,11 +298,77 @@ width: 100%;
 height: auto;
 display: flex;
 justify-content: center;
+align-self: auto;
+flex-direction: column;
+align-items: center;
+align-content: center;
+color: white;
 
 
 
 }
-.logo-login{
-  width: 200px;
-  height: 200px;
+.logo-login-signup{
+  width: 150px;
+  height: 150px;
+}
+.imput{
+  border-radius: 25px;
+  height: 50px;
+  width: 23rem;
+  background-color: transparent;
+  border: white solid 1px;
+  padding: 10px;
+  
+}
+
+.imput-box{
+  margin-top: 50px;
+}
+::placeholder { 
+  color: white;
+  opacity: 1; 
+  
+}
+.btn-login-signup{
+  background-color: #9359FF;
+  color: white;
+  border-radius: 25px;
+  height: 50px;
+  width: 23rem;
+  font-size: 20px;
+}
+.account-message{
+  color: #610CFF;
+  font-size: 20px;
+}
+
+
+
+
+.signup{
+  width: 100%;
+height: auto;
+display: flex;
+justify-content: center;
+align-self: auto;
+flex-direction: column;
+align-items: center;
+align-content: center;
+color: white;
+}
+.signup-form{
+  width: 700px;
+  height: 700px; 
+   border-radius:30px;
+   margin-top:280px;
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   align-items: center;
+   align-content: center;
+   background-image: url("../images/signup-img.jpg");
+   background-repeat: no-repeat;
+   background-size: cover ;
+   background-position: center;
+   color: white;
 }
