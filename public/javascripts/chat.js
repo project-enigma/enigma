@@ -14,7 +14,7 @@ const ChatEngine = ChatEngineCore.create({
   subscribeKey: key2,
 }, {
   globalChannel: 'chat-engine-demo-js',
-  debug: true,
+  debug: false,
 });
 
 ChatEngine.onAny((a) => {

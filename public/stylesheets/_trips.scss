@@ -1,0 +1,25 @@
+.mysteries {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.mystery {
+  display: flex;
+  flex-direction: column;
+  width: 20rem;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+h4 {
+  width: fit-content;
+}
+
+p {
+  width: fit-content;
+}
+
+.checked {
+  color: orange;
+}

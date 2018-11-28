@@ -108,7 +108,7 @@ margin: 100px 0 100px 0;
   color: darkslategrey; 
   font-size: 1.5em;
 }
-.mystery{
+.mystery-landing{
   display: flex;
   float: row nowrap;
   width: 100%;
@@ -128,14 +128,19 @@ margin: 100px 0 100px 0;
 }
 .rose-compass{
   margin: 50px 20px 50px 20px;
-  width: 400px;
+  width: 23.3%;
   height: auto;
+  margin-left: 70px;
 }
 .landing-text-1{
   text-align: right;
+  width: 33%;
+  margin-left: 70px;
 }
 .landing-text-2{
   text-align: left;
+  width: 33%;
+  margin-left: 70px;
 }
 
 
@@ -371,4 +376,89 @@ color: white;
    background-size: cover ;
    background-position: center;
    color: white;
+}
+
+
+//trips
+.mysteries-block{
+ width: 90%;
+ margin: auto;
+
+ 
+}
+
+.mysteries {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  margin-top: 5rem;
+  
+}
+
+.mystery {
+  display: flex;
+  flex-direction: column;
+  width: 31rem;
+  align-items: center;
+  margin: 3.5rem 0 0 3.5rem;
+  background-color: white;
+  padding-top: 3rem;
+  font-size: 1.3rem;
+  
+}
+.mystery:hover{
+  transition: 0.3s ease-in-out;
+  animation: bounce 1s;
+}
+
+h4 {
+  width: fit-content;
+}
+
+p {
+  width: fit-content;
+}
+
+.checked {
+  color: orange;
+}
+.mystery-img{
+  width: 25rem;
+}
+.ribbon {
+  -webkit-transform: rotate(-45deg); 
+     -moz-transform: rotate(-45deg); 
+      -ms-transform: rotate(-45deg); 
+       -o-transform: rotate(-45deg); 
+          transform: rotate(-45deg); 
+    border: 25px solid transparent;
+    border-top: 25px solid #757575;
+    position: absolute;
+    bottom: 20px;
+    right: -50px;
+    padding: 0 10px;
+    width: 120px;
+    color: white;
+    font-family: sans-serif;
+    size: 11px;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  60%,
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  40% {
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+
+  80% {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
 }
