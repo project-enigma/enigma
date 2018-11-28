@@ -95,5 +95,13 @@ socialRouter.get('/chat', ensureLoggedIn('/auth/login'), (req, res, next) => {
   });
 });
 
+socialRouter.post('/deleteFriend', ensureLoggedIn('/auth/login'), (req, res, next) => {
+  const userId = req.user.id;
+  const { friendName, friendId } = req.body;
+  User.findByIdAndUpdate(userId, { $pull: { friends: friendId } })
+    .then(() => res.redirect('/social/friends'))
+    .catch(err => next(err));
+});
+
 
 module.exports = socialRouter;
