@@ -99,6 +99,11 @@ const tripsRoutes = require('./routes/trips');
 
 app.use('/trips', tripsRoutes);
 
+
+const starRoutes = require('./routes/trips/star');
+
+app.use('/trips', starRoutes);
+
 const socialRoutes = require('./routes/social');
 
 app.use('/social', socialRoutes);
