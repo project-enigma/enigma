@@ -1,4 +1,5 @@
 // routes/index.js
+require('dotenv').config();
 const User = require('../../models/User');
 const Trip = require('../../models/Trip');
 const uploadCloud = require('../../config/cloudinary.js');
@@ -98,7 +99,7 @@ socialRouter.get('/chat/:id', ensureLoggedIn('/auth/login'), (req, res, next) =>
     .populate('users')
     .then((myTrip) => {
       res.render('social/chat', {
-        user:userName, myTrip, userAll, CHATENGINE_PUBLISH_KEY:process.env.CHATENGINE_PUBLISH_KEY, CHATENGINE_SUB_KEY : process.env.CHATENGINE_SUB_KEY,
+        username:userName, myTrip, userAll, CHATENGINE_PUBLISH_KEY:process.env.CHATENGINE_PUBLISH_KEY, CHATENGINE_SUB_KEY : process.env.CHATENGINE_SUB_KEY,
       });
     });
 });
