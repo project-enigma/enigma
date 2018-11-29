@@ -1,8 +1,10 @@
-
-@import 'chat';
-@import 'trips';
-@import 'profile';
-
+@import "_chat";
+@import "_trips";
+@import "_creditCard";
+@import "_reviews";
+@import "social/_friends";
+@import "social/_settings";
+@import "social/_profile";
 
 body {
   padding: 0px;
@@ -13,75 +15,84 @@ body {
 
 a {
   color: white;
-text-shadow: 0 2px 5px black;
-font-size: 20px;
+  text-shadow: 0 2px 5px black;
+  font-size: 20px;
 }
- 
+
 // landing
 
-.logo-image{
+.logo-image {
   width: 90px;
   height: 90px;
 }
-.main-nav{
-width: 100%;
-height: 120px;
-display: flex;
-flex-wrap: wrap;
-justify-content: space-between;
-align-items: center;
-padding-right: 10%; 
-padding-left: 10%;
-padding-bottom: 13px;
-font-size: 18px;
-font-weight: bold;
-position: fixed;
-z-index: 7;
-top: 0;
-box-shadow: 0 5px 15px rgba(0,0,0,0.6);
-background-color: rgba(0,0,0,0.3)
+
+.main-nav {
+  width: 100%;
+  height: 120px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 10%;
+  padding-left: 10%;
+  padding-bottom: 13px;
+  font-size: 18px;
+  font-weight: bold;
+  position: fixed;
+  z-index: 7;
+  top: 0;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
-.carousel-img{
+.carousel-img {
   width: 100vw;
   height: 100vh;
 }
-.text-box-1{
+
+.text-box-1 {
   position: absolute;
   top: 300px;
   text-align: left;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 
   font-weight: 300;
-
 }
 
-.text-box-2{
+.text-box-2 {
   position: absolute;
   top: 300px;
   text-align: right;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 
   font-weight: 300;
-
 }
 
-.title-slide{
+.title-slide {
   font-size: 90px;
-  text-shadow: 0 2px 10px black; 
+  text-shadow: 0 2px 10px black;
 }
-.text-btn-trips{
+
+.text-btn-trips {
   width: 320px;
   height: 60px;
-  background-color:#610CFF;
+  background-color: #610cff;
   color: white;
-  box-shadow: 0 1px 10px black; 
+  box-shadow: 0 1px 10px black;
   border: none;
   border-radius: 30px;
   text-align: center;
   margin-top: 15px;
+  transition: ease-out 0.1s;
 }
-.info{
+
+.text-btn-trips:hover {
+  cursor: pointer;
+  background-color: lighten(#610cff, 10);
+  transition: ease-in 0.15s;
+}
+
+.info {
   width: 80%;
   margin: auto;
   display: flex;
@@ -89,93 +100,99 @@ background-color: rgba(0,0,0,0.3)
   justify-content: center;
   align-items: center;
 }
-.locations{
-  width: 1000px;
-margin: 100px 0 100px 0;
-  
 
+.locations {
+  width: 1000px;
+  margin: 100px 0 100px 0;
 }
-.discover-h1{
+
+.discover-h1 {
   font-size: 100px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   margin-top: 80px;
-  border-left: #610CFF solid 8px;
+  border-left: #610cff solid 8px;
   padding-left: 25px;
 }
-.info p{
+
+.info p {
   text-align: center;
   margin-top: 50px;
-  color: darkslategrey; 
+  color: darkslategrey;
   font-size: 1.5em;
 }
-.mystery{
+.mystery-landing {
   display: flex;
   float: row nowrap;
   width: 100%;
 }
-.mystery-h1{
+
+.mystery-h1 {
   font-size: 100px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   margin: 50px 0 50px 0;
-  border-left: #610CFF solid 8px;
+  border-left: #610cff solid 8px;
   padding-left: 25px;
 }
-.discover{
+
+.discover {
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
 }
-.rose-compass{
+
+.rose-compass {
   margin: 50px 20px 50px 20px;
-  width: 400px;
+  width: 26rem;
   height: auto;
+  margin-left: 70px;
 }
-.landing-text-1{
+
+.landing-text-1 {
   text-align: right;
+  width: 33%;
+  margin-left: 70px;
 }
-.landing-text-2{
+
+.landing-text-2 {
   text-align: left;
+  width: 33%;
+  margin-left: 70px;
 }
-
-
 
 //social
-.social-h1{
+.social-h1 {
   font-size: 100px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   margin: 50px 0 50px 0;
-  border-left: #610CFF solid 8px;
+  border-left: #610cff solid 8px;
   padding-left: 25px;
 }
 
-.social{
+.social {
   display: flex;
   flex: row nowrap;
   margin: 50px 0 120px 0;
-
 }
-.card-m{
+
+.card-m {
   margin-left: 60px;
 }
-.card-mar{
+
+.card-mar {
   margin-bottom: 20px;
 }
 
-
-
-
-
 //footer
 
-.footer-top{
+.footer-top {
   width: 100%;
   text-align: center;
   color: #cccccc;
   display: table;
 }
 
-.socials{
+.socials {
   width: 100%;
   margin: 0;
   padding: 0;
@@ -240,46 +257,45 @@ margin: 100px 0 100px 0;
   transform: translateY(100%);
 }
 
-.facebook{
+.facebook {
   background: #969696;
 }
-.facebook a:after{
+
+.facebook a:after {
   background-color: #527bbb;
 }
-.twitter{
-  background: #ABABAB;
+
+.twitter {
+  background: #ababab;
 }
-.twitter a:after{
+
+.twitter a:after {
   background-color: #77ccf1;
 }
-.gplus{
+
+.gplus {
   background: #d8d8d8;
 }
-.gplus a:after{
+
+.gplus a:after {
   background: #dd4b39;
 }
 
-.footer-bottom{
+.footer-bottom {
   width: 100%;
   background: #2f2f2f;
-  height: 70px;    
- 
+  height: 70px;
+
   color: #636363;
 }
 
-
 //login
 
-
-
-
-
-.login-form{
-  
+.login-form {
   width: 700px;
- height: 700px; 
-  border-radius:30px;
-  margin-top:280px;
+  height: 700px;
+  border-radius: 30px;
+  margin-top: 280px;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -287,88 +303,226 @@ margin: 100px 0 100px 0;
   align-content: center;
   background-image: url("../images/login-img.jpg");
   background-repeat: no-repeat;
-  background-size: cover ;
+  background-size: cover;
   background-position: center;
- 
- 
-
 }
-.login{
-width: 100%;
-height: auto;
-display: flex;
-justify-content: center;
-align-self: auto;
-flex-direction: column;
-align-items: center;
-align-content: center;
-color: white;
 
-
-
+.login {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-self: auto;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  color: white;
 }
-.logo-login-signup{
+
+.logo-login-signup {
   width: 150px;
   height: 150px;
 }
-.imput{
+
+.imput {
   border-radius: 25px;
   height: 50px;
   width: 23rem;
   background-color: transparent;
   border: white solid 1px;
   padding: 10px;
-  
+  color: white;
+  outline: none;
 }
 
-.imput-box{
+.imput-box {
   margin-top: 50px;
 }
-::placeholder { 
+
+::placeholder {
   color: white;
-  opacity: 1; 
-  
+  opacity: 1;
 }
-.btn-login-signup{
-  background-color: #9359FF;
+
+.btn-login-signup {
+  background-color: #9359ff;
   color: white;
   border-radius: 25px;
   height: 50px;
   width: 23rem;
   font-size: 20px;
 }
-.account-message{
-  color: #610CFF;
+
+.account-message {
+  color: #610cff;
   font-size: 20px;
 }
 
-
-
-
-.signup{
+.signup {
   width: 100%;
-height: auto;
-display: flex;
-justify-content: center;
-align-self: auto;
-flex-direction: column;
-align-items: center;
-align-content: center;
-color: white;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-self: auto;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  color: white;
 }
-.signup-form{
+.logo-login-signup {
+  width: 150px;
+  height: 150px;
+}
+.imput {
+  border-radius: 25px;
+  height: 50px;
+  width: 23rem;
+  background-color: transparent;
+  border: white solid 1px;
+  padding: 10px;
+}
+
+.imput-box {
+  margin-top: 50px;
+}
+::placeholder {
+  color: white;
+  opacity: 1;
+}
+.btn-login-signup {
+  background-color: #9359ff;
+  color: white;
+  border-radius: 25px;
+  height: 50px;
+  width: 23rem;
+  font-size: 20px;
+}
+.account-message {
+  color: #610cff;
+  font-size: 20px;
+}
+
+.signup {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-self: auto;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  color: white;
+}
+
+.signup-form {
   width: 700px;
-  height: 700px; 
-   border-radius:30px;
-   margin-top:280px;
-   display: flex;
-   justify-content: center;
-   flex-direction: column;
-   align-items: center;
-   align-content: center;
-   background-image: url("../images/signup-img.jpg");
-   background-repeat: no-repeat;
-   background-size: cover ;
-   background-position: center;
-   color: white;
+  height: 700px;
+  border-radius: 30px;
+  margin-top: 280px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  background-image: url("../images/signup-img.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.main {
+  display: flex;
+  justify-content: space-between;
+}
+
+.social-aside {
+  background: #2f2f2f;
+  height: 89vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 20vw;
+  margin-top: 11vh;
+  color: white;
+}
+
+.social-aside img {
+  height: 11rem;
+  width: 11rem;
+  border-radius: 100%;
+  margin-top: 5rem;
+  border: white solid 3px;
+}
+
+
+.trip-chat{
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+
+  height: 5rem;
+  align-items: center;
+  padding: 2rem;
+  background-color: #610cff;
+  color: white;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  
+}
+.trip-a{
+  margin-right: -55px;
+ margin-left: 1rem;
+}
+.trip-btn{
+ 
+ height:40px;
+ background-color: white;
+ color: #610cff;
+ border-radius:10px;
+}
+
+.trip-btn:hover {
+  cursor: pointer;
+}
+
+.chat-block{
+  margin-top: 3rem;
+ 
+  display: flex;
+  width: 60rem;
+  justify-content: space-between;
+
+}
+.far{
+  font-size: 30px;
+}
+.aside-block{
+  margin-top: 4rem;
+}
+
+.fa-user-circle{
+  font-size: 60px;
+  color: white;
+  margin-top: 30px;
+}
+.fa-user-friends{
+  font-size: 50px;
+  color: white;
+  margin-top: 30px;
+}
+.fa-cogs{
+  font-size: 45px;
+  color: white;
+  margin-top: 30px;
+}
+
+.fa-user-circle:hover{
+  color: #610cff;
+}
+.fa-user-friends:hover{
+  color: #610cff;
+}
+.fa-cogs:hover{
+  color: #610cff;
 }

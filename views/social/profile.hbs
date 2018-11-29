@@ -1,27 +1,35 @@
-<aside>
-   <img src="{{user.imgPath}}" alt="" style="width:100px;height:100px">
-   <h1>{{user.username}}</h1>
-   <h3><a href="/social/profile">My Profile</a></h3>
-   <h3><a href="/social/friends">Friends</a></h3>
-   <h3><a href="/social/settings">Settings</a></h3>
-</aside>
-<style>
-   #map {
-      height: 500px;
-      width: 100%;
-   }
-</style>
-<h3>My Trips:</h3>
-<div class="trips">
-   {{#each myUser.trips}}
-      <div class="trip">
-         {{!-- <img src="the used image on trips" alt=""> --}}
-         <h3>{{this.name}}</h3>
-         <a href="/social/chat"><button>Chat</button></a>
+<div class="main">
+   {{> myAside }}
+<div class="profile">
+   
+      <style>
+         #map {
+            height: 500px;
+            width: 60rem;
+            border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2); 
+         }
+      </style>
+       <h3 class="map-h1">My Travel Map:</h3>
+
+      <div id="map"></div>
+      
+
+
+      <div class="chat-block">
+         {{#each myUser.trips}}
+
+         <div class="trip-chat">
+            {{!-- <img src="the used image on trips" alt=""> --}}
+            <h3>{{this.name}}</h3>
+            <a class="trip-a" href="/social/chat/{{this.id}}"><button class="trip-btn"><i class="far fa-comments"></i></button></a>
+         </div>
+
+         {{/each}}
       </div>
-   {{/each}}
+     
 </div>
-<div id="map"></div>
+</div>
 
 <script src="https://maps.googleapis.com/maps/api/js?key={{myEnv.GOOGLE_MAPS_API_KEY}}"></script>
 <script src="/javascripts/map.js"></script>

@@ -1,32 +1,52 @@
-<aside>
-   <img src="{{userAll.imgPath}}" alt="" style="width:100px;height:100px">
-   <h1>{{userAll.username}}</h1>
-   <h3>Trips</h3>
-   <h3><a href="/social/friends">Friends</a></h3>
-   <h3><a href="/social/settings">Settings</a></h3>
-</aside>
-
-    <div class="container">
-        <div class="col-sm-6 offset-sm-3">
-            <div class="card">
-                <div class="card-header">
-                   <img src="{{userAll.imgPath}}" alt="" style="width:40px;height:40px"> Chat
-                </div>
-                <div class="card-block">
-                    <div class="log" id="chat-output"></div>
-                    <div class="input-group">
-                        <input type="text" class="form-control message" placeholder="Your Message..." id="chat-input" onkeypress="checkSubmit(event)">
-                        <span class="input-group-btn"><button class="btn btn-primary" type="submit" onclick="sendChat()">Send</button></span>
+<div class="main">
+    {{> myAside}}
+    
+    <div class="chat">
+        <div class="chat-box">
+            <div class="profile-persons">
+                {{#each myTrip.users}}
+                <li class="clearfix" id="{{this.id}}">
+                    <div id="hola" class="about">
+                        <img class="avatar-friends" src="{{this.imgPath}}" alt="avatar" />
+                        <div id="{{this.username}}" class="nameAndStatus">
+                            <div class="name">{{this.username}}</div>
+                            <div class="status">
+                                <i class="fa fa-circle online"></i>
+                                online
+                            </div>
+                        </div>
+    
+                    </div>
+                </li>
+                {{/each}}
+            </div>
+            <div class="chat-messages-box">
+                <div class="card">
+                    <div class="card-header">
+                        <!-- <img src="{{userAll.imgPath}}" alt=""> --> {{myTrip.name}} chat
+                    </div>
+                    <div class="card-block">
+                        <div class="log" id="chat-output"></div>
+                        <div class="input-group">
+                            <input type="text" class="form-control message" placeholder="Your Message..." id="chat-input"
+                                onkeypress="checkSubmit(event)">
+                            <span class="input-group-btn"><button class="btn btn-primary" type="submit" onclick="sendChat()">Send</button></span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+    
+</div>
 
-    <script src="https://cdn.jsdelivr.net/npm/chat-engine@0.9.18/dist/chat-engine.min.js"></script>
-    <script>let key1 = {{{json CHATENGINE_PUBLISH_KEY}}};</script>
-    <script>let user = {{{json user}}};</script>
-    <script>let key2 = {{{json CHATENGINE_SUB_KEY}}}</script>
-    <script src="/javascripts/chat.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.0/handlebars.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/list.js/1.1.1/list.min.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/chat-engine@0.9.18/dist/chat-engine.min.js"></script>
+<script>let key1 = {{{ json CHATENGINE_PUBLISH_KEY }}};</script>
+<script>let user = {{{ json username }}};</script>
+<script>let key2 = {{{ json CHATENGINE_SUB_KEY }}}</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.0/handlebars.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/list.js/1.1.1/list.min.js"></script>
+<script src="/javascripts/chat.js"></script>

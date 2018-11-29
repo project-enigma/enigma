@@ -5,6 +5,8 @@ const {
 } = mongoose;
 require('dotenv').config();
 
+require('./User');
+
 const TripSchema = new Schema({
   name: {
     type: String,
@@ -36,6 +38,7 @@ const TripSchema = new Schema({
   },
   users: [{
     type: Schema.Types.ObjectId,
+    ref: 'User',
   }],
 });
 

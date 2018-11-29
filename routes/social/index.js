@@ -1,10 +1,11 @@
 // routes/index.js
+require('dotenv').config();
 const User = require('../../models/User');
+const Trip = require('../../models/Trip');
 const uploadCloud = require('../../config/cloudinary.js');
 const express = require('express');
 const { ensureLoggedIn, ensureLoggedOut } = require('connect-ensure-login');
 
-const passport = require('passport');
 const bcrypt = require('bcrypt');
 
 const bcryptSalt = 10;
@@ -90,12 +91,16 @@ socialRouter.post('/friends', ensureLoggedIn('/auth/login'), (req, res, next) =>
     });
 });
 
-socialRouter.get('/chat', ensureLoggedIn('/auth/login'), (req, res, next) => {
+socialRouter.get('/chat/:id', ensureLoggedIn('/auth/login'), (req, res, next) => {
   const userName = req.user.username;
   const userAll = req.user;
-  res.render('social/chat', {
-    user:userName, userAll, CHATENGINE_PUBLISH_KEY:process.env.CHATENGINE_PUBLISH_KEY, CHATENGINE_SUB_KEY : process.env.CHATENGINE_SUB_KEY,
-  });
+  Trip.findById(req.params.id)
+    .populate('users')
+    .then((myTrip) => {
+      res.render('social/chat', {
+        username:userName, myTrip, userAll, CHATENGINE_PUBLISH_KEY:process.env.CHATENGINE_PUBLISH_KEY, CHATENGINE_SUB_KEY : process.env.CHATENGINE_SUB_KEY,
+      });
+    });
 });
 
 socialRouter.post('/deleteFriend', ensureLoggedIn('/auth/login'), (req, res, next) => {
