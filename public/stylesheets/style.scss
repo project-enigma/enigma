@@ -1,9 +1,10 @@
-@import '_chat';
-@import '_trips';
-@import '_creditCard';
-@import 'social/_friends';
-@import 'social/_settings';
-@import 'social/_profile';
+@import "_chat";
+@import "_trips";
+@import "_creditCard";
+@import "_reviews";
+@import "social/_friends";
+@import "social/_settings";
+@import "social/_profile";
 
 body {
   padding: 0px;
@@ -41,7 +42,7 @@ a {
   z-index: 7;
   top: 0;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
-  background-color: rgba(0, 0, 0, 0.3)
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .carousel-img {
@@ -53,20 +54,18 @@ a {
   position: absolute;
   top: 300px;
   text-align: left;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 
   font-weight: 300;
-
 }
 
 .text-box-2 {
   position: absolute;
   top: 300px;
   text-align: right;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 
   font-weight: 300;
-
 }
 
 .title-slide {
@@ -77,7 +76,7 @@ a {
 .text-btn-trips {
   width: 320px;
   height: 60px;
-  background-color: #610CFF;
+  background-color: #610cff;
   color: white;
   box-shadow: 0 1px 10px black;
   border: none;
@@ -98,15 +97,13 @@ a {
 .locations {
   width: 1000px;
   margin: 100px 0 100px 0;
-
-
 }
 
 .discover-h1 {
   font-size: 100px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   margin-top: 80px;
-  border-left: #610CFF solid 8px;
+  border-left: #610cff solid 8px;
   padding-left: 25px;
 }
 
@@ -116,7 +113,7 @@ a {
   color: darkslategrey;
   font-size: 1.5em;
 }
-.mystery-landing{
+.mystery-landing {
   display: flex;
   float: row nowrap;
   width: 100%;
@@ -124,9 +121,9 @@ a {
 
 .mystery-h1 {
   font-size: 100px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   margin: 50px 0 50px 0;
-  border-left: #610CFF solid 8px;
+  border-left: #610cff solid 8px;
   padding-left: 25px;
 }
 
@@ -156,14 +153,12 @@ a {
   margin-left: 70px;
 }
 
-
-
 //social
 .social-h1 {
   font-size: 100px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   margin: 50px 0 50px 0;
-  border-left: #610CFF solid 8px;
+  border-left: #610cff solid 8px;
   padding-left: 25px;
 }
 
@@ -171,7 +166,6 @@ a {
   display: flex;
   flex: row nowrap;
   margin: 50px 0 120px 0;
-
 }
 
 .card-m {
@@ -181,10 +175,6 @@ a {
 .card-mar {
   margin-bottom: 20px;
 }
-
-
-
-
 
 //footer
 
@@ -269,7 +259,7 @@ a {
 }
 
 .twitter {
-  background: #ABABAB;
+  background: #ababab;
 }
 
 .twitter a:after {
@@ -292,19 +282,13 @@ a {
   color: #636363;
 }
 
-
 //login
 
-
-
-
-
-.login-form{
-  
+.login-form {
   width: 700px;
- height: 700px; 
-  border-radius:30px;
-  margin-top:280px;
+  height: 700px;
+  border-radius: 30px;
+  margin-top: 280px;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -312,9 +296,8 @@ a {
   align-content: center;
   background-image: url("../images/login-img.jpg");
   background-repeat: no-repeat;
-  background-size: cover ;
+  background-size: cover;
   background-position: center;
- 
 }
 
 .login {
@@ -327,7 +310,6 @@ a {
   align-items: center;
   align-content: center;
   color: white;
-
 }
 
 .logo-login-signup {
@@ -344,7 +326,6 @@ a {
   padding: 10px;
   color: white;
   outline: none;
-
 }
 
 .imput-box {
@@ -354,21 +335,19 @@ a {
 ::placeholder {
   color: white;
   opacity: 1;
-
 }
 
 .btn-login-signup {
-  background-color: #9359FF;
+  background-color: #9359ff;
   color: white;
   border-radius: 25px;
   height: 50px;
   width: 23rem;
   font-size: 20px;
-
 }
 
 .account-message {
-  color: #610CFF;
+  color: #610cff;
   font-size: 20px;
 }
 
@@ -383,88 +362,126 @@ a {
   align-content: center;
   color: white;
 }
-.logo-login-signup{
+.logo-login-signup {
   width: 150px;
   height: 150px;
 }
-.imput{
+.imput {
   border-radius: 25px;
   height: 50px;
   width: 23rem;
   background-color: transparent;
   border: white solid 1px;
   padding: 10px;
-  
 }
 
-.imput-box{
+.imput-box {
   margin-top: 50px;
 }
-::placeholder { 
+::placeholder {
   color: white;
-  opacity: 1; 
-  
+  opacity: 1;
 }
-.btn-login-signup{
-  background-color: #9359FF;
+.btn-login-signup {
+  background-color: #9359ff;
   color: white;
   border-radius: 25px;
   height: 50px;
   width: 23rem;
   font-size: 20px;
 }
-.account-message{
-  color: #610CFF;
+.account-message {
+  color: #610cff;
   font-size: 20px;
 }
 
-
-
-
-.signup{
+.signup {
   width: 100%;
-height: auto;
-display: flex;
-justify-content: center;
-align-self: auto;
-flex-direction: column;
-align-items: center;
-align-content: center;
-color: white;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-self: auto;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  color: white;
 }
-.signup-form{
+
+.signup-form {
   width: 700px;
-  height: 700px; 
-   border-radius:30px;
-   margin-top:280px;
-   display: flex;
-   justify-content: center;
-   flex-direction: column;
-   align-items: center;
-   align-content: center;
-   background-image: url("../images/signup-img.jpg");
-   background-repeat: no-repeat;
-   background-size: cover ;
-   background-position: center;
-   color: white;
+  height: 700px;
+  border-radius: 30px;
+  margin-top: 280px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  background-image: url("../images/signup-img.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
 .main {
   display: flex;
   justify-content: space-between;
 }
 
-
 .social-aside {
   background: #2f2f2f;
-  height: 100vh;
+  height: 90vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+
   width: 20vw;
+  margin-top: 11vh;
+  color: white;
 }
 
 .social-aside img {
-  height: 15rem;
-  width: 15rem;
+  height: 11rem;
+  width: 11rem;
   border-radius: 100%;
+  margin-top: 5rem;
+  border: white solid 3px;
+}
+
+
+.trip-chat{
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+
+  height: 5rem;
+  align-items: center;
+  padding: 2rem;
+  background-color: #610cff;
+  color: white;
+  
+}
+.trip-a{
+  margin-right: -55px;
+ margin-left: 1rem;
+}
+.trip-btn{
+ 
+ height:40px;
+ background-color: white;
+ color: #610cff;
+ border-radius:10px;
+
+}
+.chat-block{
+  margin-top: 3rem;
+ 
+  display: flex;
+  width: 60rem;
+  justify-content: space-between;
+
+}
+.far{
+  font-size: 30px;
 }
