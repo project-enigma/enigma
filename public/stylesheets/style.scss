@@ -83,6 +83,13 @@ a {
   border-radius: 30px;
   text-align: center;
   margin-top: 15px;
+  transition: ease-out 0.1s;
+}
+
+.text-btn-trips:hover {
+  cursor: pointer;
+  background-color: lighten(#610cff, 10);
+  transition: ease-in 0.15s;
 }
 
 .info {
@@ -473,8 +480,12 @@ a {
  background-color: white;
  color: #610cff;
  border-radius:10px;
-
 }
+
+.trip-btn:hover {
+  cursor: pointer;
+}
+
 .chat-block{
   margin-top: 3rem;
  
