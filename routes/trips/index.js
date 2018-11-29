@@ -8,7 +8,7 @@ const express = require('express');
 
 const nodeoutlook = require('nodejs-nodemailer-outlook');
 
-const { ensureLoggedIn, ensureLoggedOut } = require('connect-ensure-login');
+const { ensureLoggedIn } = require('connect-ensure-login');
 
 const tripsRouter = express.Router();
 

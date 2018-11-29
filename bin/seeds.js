@@ -25,6 +25,70 @@ mongoose
   });
 
 
+const reviews = [
+  {
+    place: 'London',
+    title: 'The big city',
+    description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis ratione incidunt amet tempora, id exercitationem velit! Vero magnam quae aliquid delectus fuga cum optio. Porro dolorem rem exercitationem fugit recusandae!',
+    images: [
+      {
+        imgPath: 'https://www.royalfashionist.com/wp-content/uploads/2017/09/london.jpg',
+        imgName: 'London\'s eye',
+      },
+    ],
+    location: {
+      lat: '51.507351',
+      lng: '-0.127758',
+    },
+  },
+  {
+    place: 'Berlin',
+    title: 'The Wall',
+    description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis ratione incidunt amet tempora, id exercitationem velit! Vero magnam quae aliquid delectus fuga cum optio. Porro dolorem rem exercitationem fugit recusandae!',
+    images: [
+      {
+        imgPath: 'https://news.usc.edu/files/2014/12/Berlin-Wall-1961-824x549.jpg',
+        imgName: 'Berlin Wall',
+      },
+    ],
+    location: {
+      lat: '52.520008',
+      lng: '13.404954',
+    },
+  },
+  {
+    place: 'Miami',
+    title: 'The Paradise',
+    description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis ratione incidunt amet tempora, id exercitationem velit! Vero magnam quae aliquid delectus fuga cum optio. Porro dolorem rem exercitationem fugit recusandae!',
+    images: [
+      {
+        imgPath: 'https://cdn.cnn.com/cnnnext/dam/assets/180614153928-03-miami---south-beach.jpg',
+        imgName: 'Miami Beach',
+      },
+    ],
+    location: {
+      lat: '25.761681',
+      lng: '-80.191788',
+    },
+  },
+];
+
+Review.deleteMany()
+  .then(() => Review.create(reviews))
+  .then((ReviewsCreated) => {
+    console.log(`${ReviewsCreated.length} reviews created with the following id:`);
+    console.log(ReviewsCreated.map(u => u._id));
+  })
+  .then(() => {
+  // Close properly the connection to Mongoose
+    mongoose.disconnect();
+  })
+  .catch((err) => {
+    mongoose.disconnect();
+    throw err;
+  });
+
+
 const trips = [
   {
     name: 'Mystery Trip #1',
@@ -104,28 +168,27 @@ Trip.deleteMany()
     throw err;
   });
 
-// const users = [
-//   {
-//     username: 'alice',
-//     password: bcrypt.hashSync('alice', bcrypt.genSaltSync(bcryptSalt)),
-//   },
-//   {
-//     username: 'bob',
-//     password: bcrypt.hashSync('bob', bcrypt.genSaltSync(bcryptSalt)),
-//   },
-// ];
+const users = [
+  {
+    username: 'alice',
+    password: bcrypt.hashSync('alice', bcrypt.genSaltSync(bcryptSalt)),
+  },
+  {
+    username: 'bob',
+    password: bcrypt.hashSync('bob', bcrypt.genSaltSync(bcryptSalt)),
+  },
+];
 
-// User.deleteMany()
-//   .then(() => User.create(users))
-//   .then((usersCreated) => {
-//     console.log(`${usersCreated.length} users created with the following id:`);
-//     console.log(usersCreated.map(u => u._id));
-//   })
-//   .then(() => {
-//   // Close properly the connection to Mongoose
-//     mongoose.disconnect();
-//   })
-//   .catch((err) => {
-//     mongoose.disconnect();
-//     throw err;
-//   });
+User.create(users)
+  .then((usersCreated) => {
+    console.log(`${usersCreated.length} users created with the following id:`);
+    console.log(usersCreated.map(u => u._id));
+  })
+  .then(() => {
+  // Close properly the connection to Mongoose
+    mongoose.disconnect();
+  })
+  .catch((err) => {
+    mongoose.disconnect();
+    throw err;
+  });

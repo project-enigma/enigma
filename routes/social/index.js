@@ -6,7 +6,6 @@ const uploadCloud = require('../../config/cloudinary.js');
 const express = require('express');
 const { ensureLoggedIn, ensureLoggedOut } = require('connect-ensure-login');
 
-const passport = require('passport');
 const bcrypt = require('bcrypt');
 
 const bcryptSalt = 10;
