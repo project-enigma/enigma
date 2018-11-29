@@ -1,4 +1,5 @@
 // routes/index.js
+require('dotenv').config();
 const User = require('../../models/User');
 const Trip = require('../../models/Trip');
 const uploadCloud = require('../../config/cloudinary.js');
