@@ -24,35 +24,6 @@ mongoose
     console.error('Error connecting to mongo', err);
   });
 
-// const reviews = [{
-//   place: 'London',
-//   title: 'My Review',
-//   description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis ratione incidunt amet tempora, id exercitationem velit! Vero magnam quae aliquid delectus fuga cum optio. Porro dolorem rem exercitationem fugit recusandae!',
-//   images: [{
-//     imgPath: 'https://www.royalfashionist.com/wp-content/uploads/2017/09/london.jpg',
-//     imgName: 'London',
-//   }],
-//   location: {
-//     lat: '51.507351',
-//     lng: '-0.127758',
-//   },
-// },
-// ];
-
-// Review.deleteMany()
-//   .then(() => Review.create(reviews))
-//   .then((tripsCreated) => {
-//     console.log(`${tripsCreated.length} reviews created with the following id:`);
-//     console.log(tripsCreated.map(u => u._id));
-//   })
-//   .then(() => {
-//     // Close properly the connection to Mongoose
-//     mongoose.disconnect();
-//   })
-//   .catch((err) => {
-//     mongoose.disconnect();
-//     throw err;
-//   });
 
 const trips = [
   {
