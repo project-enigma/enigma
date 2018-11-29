@@ -1,14 +1,13 @@
 function startMap() {
-  const map = new google.maps.Map(
-    document.getElementById('map'), {
-      zoom: 3,
-      center: {
-        lat: 41,
-        lng: 41,
-      },
+  const map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 3,
+    center: {
+      lat: 41,
+      lng: 41,
     },
-  );
-  axios.get('/social/GetTrips')
+  });
+  axios
+    .get('/social/GetTrips')
     .then((res) => {
       res.data.myUser.reviews.forEach((elem) => {
         if (elem.location) {
@@ -37,7 +36,6 @@ function startMap() {
     })
     .catch(err => console.log(err));
 }
-
 
 window.onload = () => {
   startMap();

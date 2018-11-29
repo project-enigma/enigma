@@ -431,7 +431,7 @@ a {
 
 .social-aside {
   background: #2f2f2f;
-  height: 90vh;
+  height: 89vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -460,6 +460,7 @@ a {
   padding: 2rem;
   background-color: #610cff;
   color: white;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
   
 }
 .trip-a{
@@ -484,4 +485,33 @@ a {
 }
 .far{
   font-size: 30px;
+}
+.aside-block{
+  margin-top: 4rem;
+}
+
+.fa-user-circle{
+  font-size: 60px;
+  color: white;
+  margin-top: 30px;
+}
+.fa-user-friends{
+  font-size: 50px;
+  color: white;
+  margin-top: 30px;
+}
+.fa-cogs{
+  font-size: 45px;
+  color: white;
+  margin-top: 30px;
+}
+
+.fa-user-circle:hover{
+  color: #610cff;
+}
+.fa-user-friends:hover{
+  color: #610cff;
+}
+.fa-cogs:hover{
+  color: #610cff;
 }
