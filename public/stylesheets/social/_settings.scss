@@ -1,0 +1,43 @@
+.user-settings {
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.my-settings {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.my-settings label {
+  font-size: 1.25rem;
+}
+
+.my-settings input {
+  margin: 0 0 1.5rem 0;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 2rem;
+  background: white;
+  padding: 0.5rem 1rem;
+  outline: none;
+  font-size: 1.1rem;
+}
+
+#edit-info {
+  padding: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 2rem;
+  cursor: pointer;
+  background: lightgreen;
+  color: rgb(25, 25, 25);
+  transition: ease-out 0.1s;
+}
+
+#edit-info:hover {
+  background: darken(lightgreen , 15);
+  transition: ease-in 0.15s;
+}

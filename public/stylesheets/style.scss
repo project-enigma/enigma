@@ -447,4 +447,24 @@ color: white;
    background-size: cover ;
    background-position: center;
    color: white;
+.main {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.social-aside {
+  background: #2f2f2f;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 20vw;
+}
+
+.social-aside img {
+  height: 15rem;
+  width: 15rem;
+  border-radius: 100%;
 }
