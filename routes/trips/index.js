@@ -6,6 +6,8 @@ const Trip = require('../../models/Trip');
 
 const express = require('express');
 
+const nodeoutlook = require('nodejs-nodemailer-outlook');
+
 const { ensureLoggedIn, ensureLoggedOut } = require('connect-ensure-login');
 
 const tripsRouter = express.Router();
@@ -32,9 +34,23 @@ tripsRouter.get('/buy/:id/success', ensureLoggedIn('/auth/login'), (req, res, ne
 
 tripsRouter.post('/buy/:id', ensureLoggedIn('/auth/login'), (req, res, next) => {
   Trip.findByIdAndUpdate(req.params.id, { $addToSet: { users: req.user.id } })
-    .then(() => {
+    .then((myTrip) => {
       User.findByIdAndUpdate(req.user.id, { $addToSet: { trips: req.params.id } })
-        .then(() => res.redirect(`/trips/buy/${req.params.id}/success`))
+        .then(() => {
+          const emailOnSuccess = req.user.email;
+          nodeoutlook.sendEmail({
+            auth: {
+              user: process.env.NODEMAILER,
+              pass: process.env.NODEMAILER_PASSWORD,
+            },
+            from: process.env.NODEMAILER,
+            to: emailOnSuccess,
+            subject: 'Awesome! You bought Mystery trip',
+            html: `<h2>Congratulations!</h2><p>You have just bought ${myTrip.name}.</p><p>${myTrip.tips}</p>`,
+          });
+          res.redirect(`/trips/buy/${req.params.id}/success`);
+        })
+
         .catch(err => next(err));
     })
     .catch(err => next(err));
