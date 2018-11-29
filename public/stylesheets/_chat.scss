@@ -4,6 +4,11 @@ $background-color: #f3f3f3;
 $green: #86BB71;
 
 .chat {
+  width: 80vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   .chat-box {
     display: flex;
     flex-direction: row;
