@@ -1,7 +1,7 @@
 
-@import 'chat';
-@import 'trips';
-@import 'profile';
+@import '_chat';
+@import '_trips';
+@import '_profile';
 
 
 body {
@@ -108,7 +108,7 @@ margin: 100px 0 100px 0;
   color: darkslategrey; 
   font-size: 1.5em;
 }
-.mystery{
+.mystery-landing{
   display: flex;
   float: row nowrap;
   width: 100%;
@@ -128,14 +128,19 @@ margin: 100px 0 100px 0;
 }
 .rose-compass{
   margin: 50px 20px 50px 20px;
-  width: 400px;
+  width: 26rem;
   height: auto;
+  margin-left: 70px;
 }
 .landing-text-1{
   text-align: right;
+  width: 33%;
+  margin-left: 70px;
 }
 .landing-text-2{
   text-align: left;
+  width: 33%;
+  margin-left: 70px;
 }
 
 
@@ -336,6 +341,7 @@ color: white;
   height: 50px;
   width: 23rem;
   font-size: 20px;
+
 }
 .account-message{
   color: #610CFF;
