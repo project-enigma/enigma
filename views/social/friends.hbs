@@ -1,37 +1,36 @@
-<aside>
-   <img src="{{user.imgPath}}" alt="" style="width:100px;height:100px">
-   <h1>{{user.username}}</h1>
-   <h3><a href="/social/profile">My Profile</a></h3>
-   <h3><a href="/social/friends">Friends</a></h3>
-   <h3><a href="/social/settings">Settings</a></h3>
-</aside>
+<div class="main">
+  {{> myAside }}
 
-<section>
-  <form action="" method="post">
-  <div>
-    <label>Find friend</label>
-    <input type="text" name="friendUsername">
-    {{#if error }}
-  <div class="error-message">{{ error }}</div>
-  {{/if}}
-    <input type="text" name="userid" value="{{user.id}}" hidden>
-    <input type="submit" value="Add">
-  </div>
-  </form>
-  
-  {{#each myUser.friends}}
-  <img src="{{this.imgPath}}" alt="" style="width:100px;height:100px;">
-  <p>{{this.username}}</p>
+  <form>
 
-  <form action="/social/deleteFriend" method="post">
-    <input type="text" name="friendId" value="{{this.id}}" hidden>
-    <input type="text" name="friendName" value="{{this.username}}" hidden>
-    <input type="submit" value="Delete">
   </form>
 
-  {{/each}}
-</section>
+  <section class="friend-list">
+    <form action="" method="post" class="add-friend">
+      <div class="search-bar">
+        <input class="search-imput" type="search" placeholder="Add Friend" aria-label="Search">
+        <input type="text" name="userid" value="{{user.id}}" hidden>
+        <button class="search-btn" type="submit"><i class="fas fa-search"></i></button>
+      </div>
+      {{#if error }}
+      <div class="error-message">{{ error }}</div>
+      {{/if}}
+    </form>
+    <div class="friends">
+      {{#each myUser.friends}}
+      <div class="friend">
+        <img src="{{this.imgPath}}" alt="">
+        <p>{{this.username}}</p>
+
+        <form action="/social/deleteFriend" method="post">
+          <input type="text" name="friendId" value="{{this.id}}" hidden>
+          <input type="text" name="friendName" value="{{this.username}}" hidden>
+          <input class="delete-friend" type="submit" value="Delete">
+        </form>
+      </div>
+      {{/each}}
+    </div>
+  </section>
+</div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script>
-

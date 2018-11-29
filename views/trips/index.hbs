@@ -1,43 +1,33 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<style>
-  .mysteries {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-  }
 
-  .mystery {
-    display: flex;
-    flex-direction: column;
-    width: 20rem;
-    align-items: center;
-    margin: 2rem 0;
-  }
 
-  h4 {
-    width: fit-content;
-  }
+<div class="mysteries-block">
+<h1 class="search-h1">Discover what's out there.</h1>
+    
+<form class="form-inline searchbar">
+    <input class="search-imput" type="search" placeholder="Search Airport" aria-label="Search">
 
-  p {
-    width: fit-content;
-  }
-
-  .checked {
-    color: orange;
-  }
-</style>
+    <button class="search-btn" type="submit"><i class="fas fa-search"></i></button>
+  </form>
 
 <div class="mysteries">
   {{#each trips}}
   {{#if this.tickets}}
   <div class="mystery" onclick="location.href='/trips/buy/{{this.id}}'">
     {{else}}
-    <div class="mystery">
+    
+    <div class="mystery mysteryOff">
+     
+      
       {{/if}}
-      <img src="https://dsbs42.files.wordpress.com/2011/06/quoi.gif" alt="">
+      
+      <img class="mystery-img" src="/images/mystery-img.jpg" alt="">
+      
       <h4>{{this.name}}</h4>
+      
       {{#if this.tickets}}
+      
       <p>{{this.tickets}} tickets left!</p>
       {{else}}
       <p>No tickets left...</p>
@@ -53,6 +43,12 @@
         <span class="fa fa-star"></span>
       </div>
       <p>Price: {{this.price}}€ </p>
+      
     </div>
     {{/each}}
   </div>
+ 
+</div>
+</div>
+
+
