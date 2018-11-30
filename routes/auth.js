@@ -8,7 +8,6 @@ const User = require('../models/User');
 
 // Bcrypt to encrypt passwords
 const bcrypt = require('bcrypt');
-const { ensureLoggedIn, ensureLoggedOut } = require('connect-ensure-login');
 
 const bcryptSalt = 10;
 

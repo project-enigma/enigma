@@ -83,11 +83,14 @@ a {
   border-radius: 30px;
   text-align: center;
   margin-top: 15px;
-
+  transition: ease-out 0.1s;
 }
+
 .text-btn-trips:hover {
+  cursor: pointer;
   background-color: white;
-  color:  #610cff;
+  color: #610cff;
+  transition: ease-in 0.15s;
 }
 
 .info {
@@ -349,6 +352,14 @@ a {
   height: 50px;
   width: 23rem;
   font-size: 20px;
+  transition: ease-out 0.1s
+}
+
+.btn-login-signup:hover {
+  background: white;
+  color: #9359ff;
+  cursor: pointer;
+  transition: ease-in 0.15s
 }
 
 .account-message {
@@ -478,8 +489,12 @@ a {
  background-color: white;
  color: #610cff;
  border-radius:10px;
-
 }
+
+.trip-btn:hover {
+  cursor: pointer;
+}
+
 .chat-block{
   margin-top: 3rem;
  

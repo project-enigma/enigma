@@ -2,16 +2,6 @@ document.addEventListener('DOMContentLoaded', () => {
   console.log('IronGenerator JS imported successfully!');
 }, false);
 
-axios.get('/trips/getAll')
-  .then((trips) => {
-    trips.data.trips.forEach((elem, index) => {
-      for (let i = 0; i < elem.stars; i++) {
-        document.querySelectorAll('.mystery')[index].querySelectorAll('.fa-star')[i].classList.add('checked');
-      }
-    });
-  });
-
-
 $('.input-cart-number').on('keyup change', function () {
   $t = $(this);
 
@@ -42,9 +32,9 @@ $('#card-holder').on('keyup change', function () {
 
 $('#card-expiration-month, #card-expiration-year').change(() => {
   m = $('#card-expiration-month option').index($('#card-expiration-month option:selected'));
-  m = (m < 10) ? `0${  m}` : m;
+  m = (m < 10) ? `0${m}` : m;
   y = $('#card-expiration-year').val().substr(2, 2);
-  $('.card-expiration-date div').html(`${m  }/${  y}`);
+  $('.card-expiration-date div').html(`${m}/${y}`);
 });
 
 $('#card-ccv').on('focus', () => {

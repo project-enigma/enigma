@@ -1,10 +1,7 @@
-const User = require('../../models/User');
 const Review = require('../../models/Review');
 const Comment = require('../../models/Comment');
 
-const uploadCloud = require('../../config/cloudinary.js');
 const express = require('express');
-const { ensureLoggedIn, ensureLoggedOut } = require('connect-ensure-login');
 
 const reviewsRouter = express.Router();
 
