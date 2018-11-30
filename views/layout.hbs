@@ -25,22 +25,24 @@
 <body>
 
   <nav class="main-nav">
-    <a href="/">ABOUT</a>
-    <a href="/trips">TRIPS</a>
+    <a class="layout-nav-items" href="/">ABOUT</a>
+    <a class="layout-nav-items" href="/trips">TRIPS</a>
     <img class="logo-image" src="/images/enigma-logo-white.svg" alt="logo">
     {{#if user}}
-    <a href="/social/profile">SOCIAL</a>
-    <a href="/auth/logout">LOGOUT</a>
+    <a class="layout-nav-items" href="/social/profile">SOCIAL</a>
+    <a class="layout-nav-items" href="/auth/logout">LOGOUT</a>
     {{else}}
-    <a href="/auth/login">LOGIN</a>
-    <a href="/auth/signup">SIGNUP</a>
+    <a class="layout-nav-items" href="/auth/login">LOGIN</a>
+    <a class="layout-nav-items" href="/auth/signup">SIGNUP</a>
     {{/if}}
   </nav>
 
   {{{body}}}
 
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="/javascripts/search.js"></script>
   <script src="/javascripts/script.js"></script>
+  
 </body>
 
 </html>
