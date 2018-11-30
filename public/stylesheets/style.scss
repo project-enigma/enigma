@@ -25,12 +25,15 @@ a {
   font-size: 20px;
   height: 50px;
   margin-top: 30px;
+  transition: ease-out 0.1s;
+
 }
 .layout-nav-items:hover{
   text-decoration: none;
   color: darken(white, 10);
   border-bottom: white solid 5px;
-  cursor: pointer;  
+  cursor: pointer;
+  transition: ease-in 0.15s;
 }
 
 // landing
