@@ -19,6 +19,20 @@ a {
   font-size: 20px;
 }
 
+.layout-nav-items{
+  color: white;
+  text-shadow: 0 2px 5px black;
+  font-size: 20px;
+  height: 50px;
+  margin-top: 30px;
+}
+.layout-nav-items:hover{
+  text-decoration: none;
+  color: darken(white, 10);
+  border-bottom: white solid 5px;
+  cursor: pointer;  
+}
+
 // landing
 
 .logo-image {
@@ -477,6 +491,8 @@ a {
   background-color: #610cff;
   color: white;
   box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  margin-top: 2rem;
+  margin-right: 3.6rem;
   
 }
 .trip-a{
@@ -499,8 +515,10 @@ a {
   margin-top: 3rem;
  
   display: flex;
+  flex-wrap: wrap;
   width: 60rem;
-  justify-content: space-between;
+  justify-content: flex-start;
+  margin-left: 2rem;
 
 }
 .far{
